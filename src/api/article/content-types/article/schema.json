@@ -4,7 +4,8 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "Articles"
+    "displayName": "Articles",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,17 +19,30 @@
       "type": "integer"
     },
     "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "slug": {
       "type": "uid"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "articles"
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
     }
   }
 }
