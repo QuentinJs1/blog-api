@@ -43,6 +43,9 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "socialTitle": {
+      "type": "string"
     }
   }
 }
